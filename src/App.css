@@ -20,7 +20,6 @@ body {
   box-sizing: border-box;
   color: white;
   z-index: 1;
-  width: 100%;
 }
 
 .container {
@@ -159,6 +158,10 @@ i {
 
   .content {
     height: fit-content;
+    width: 100%;
+  }
+
+  * {
     width: 100%;
   }
 }
