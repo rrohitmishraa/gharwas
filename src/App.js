@@ -47,6 +47,7 @@ function App() {
             referrerpolicy="no-referrer-when-downgrade"
           />
         </div>
+        <div className="thanks">THANKS</div>
       </div>
     </div>
   );

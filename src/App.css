@@ -46,10 +46,9 @@ body {
 }
 
 .content {
-  position: relative;
   display: flex;
   padding: 30px 30px 250px 30px;
-  width: 520px;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -136,6 +135,16 @@ i {
   width: 100%;
   z-index: 0;
   opacity: 0.4;
+}
+
+.thanks {
+  position: absolute;
+  font-family: "Holtwood One SC";
+  bottom: 0;
+  left: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 /* *********************  MOBILE  ******************** */
