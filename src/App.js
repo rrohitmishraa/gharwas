@@ -45,6 +45,7 @@ function App() {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            title="map"
           />
         </div>
         <div className="thanks">THANKS</div>
