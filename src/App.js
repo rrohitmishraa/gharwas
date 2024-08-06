@@ -16,7 +16,7 @@ const OptimizedLottie = memo(() => (
 function App() {
   return (
     <div className="container">
-      <OptimizedLottie />
+      {/* <OptimizedLottie /> */}
       <div className="content">
         <img src="./components/paneshji.png" className="ganeshji-pic" alt="" />
         <span className="names">
@@ -26,7 +26,7 @@ function App() {
         <span className="gp"> Griha Pravesh Ceremony </span>
         <span className="text-two"> OF OUR NEW HOME ON </span>
         <span className="date"> 8th Nov 2024</span>
-        <span className="text-two"> 10:00AM ONWARDS </span>
+        <span className="time"> 10:00AM ONWARDS </span>
 
         <img src="./components/family.png" className="fam-pic" alt="" />
 
