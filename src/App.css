@@ -132,11 +132,6 @@ i {
   z-index: 0;
   opacity: 0.4;
 }
-.thanks {
-  position: absolute;
-  bottom: 0;
-  font-family: "Holtwood One SC";
-}
 
 /* *********************  MOBILE  ******************** */
 @media only screen and (max-width: 480px) {
