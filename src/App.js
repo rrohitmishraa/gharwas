@@ -16,7 +16,7 @@ const OptimizedLottie = memo(() => (
 function App() {
   return (
     <div className="container">
-      {/* <OptimizedLottie /> */}
+      <OptimizedLottie />
       <div className="content">
         <img src="./components/paneshji.png" className="ganeshji-pic" alt="" />
         <span className="names">
