@@ -3,7 +3,6 @@
 :root {
   --purple: rgb(59, 25, 138);
   --pink: rgb(251, 86, 198);
-  --green: rgb(51, 109, 129);
   --orange: rgb(201, 94, 57);
 }
 
@@ -49,7 +48,7 @@ body {
 .content {
   position: relative;
   display: flex;
-  padding: 50px 30px 30px 30px;
+  padding: 30px 30px 200px 30px;
   width: 520px;
   height: auto;
   display: flex;
@@ -60,9 +59,15 @@ body {
   width: 120px;
   margin-left: -25px;
 }
+.names {
+  margin: 20px 0;
+  color: var(--green);
+  font-weight: bold;
+  font-size: 18px;
+}
 
 .top-text {
-  font-size: 12px;
+  font-size: 16px;
   margin: 30px 0;
 }
 
@@ -79,13 +84,43 @@ body {
 }
 
 .date {
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 28px;
   background-color: var(--pink);
   width: fit-content;
   padding: 5px 10px;
   border-radius: 8px;
   font-weight: bold;
+}
+
+.location {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+iframe {
+  outline: none;
+  border: none;
+}
+
+i {
+  color: var(--purple);
+  font-size: 12px;
+}
+
+.address-head {
+  margin-bottom: 5px;
+  color: var(--purple);
+  font-weight: bold;
+}
+
+.address {
+  color: var(--purple);
+  margin-bottom: 30px;
 }
 
 .fam-pic {
