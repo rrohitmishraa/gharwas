@@ -48,7 +48,7 @@ body {
 .content {
   position: relative;
   display: flex;
-  padding: 30px 30px 200px 30px;
+  padding: 30px 30px 250px 30px;
   width: 520px;
   height: auto;
   display: flex;
@@ -63,7 +63,8 @@ body {
   margin: 20px 0;
   color: var(--green);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: "Holtwood One SC";
 }
 
 .top-text {
@@ -72,7 +73,7 @@ body {
 }
 
 .gp {
-  font-family: "Holtwood One SC", serif;
+  font-family: "Holtwood One SC";
   font-size: 55px;
   color: var(--pink);
 }
@@ -131,6 +132,13 @@ i {
   width: 100%;
   z-index: 0;
   opacity: 0.4;
+}
+.thanks {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  font-family: "Holtwood One SC";
 }
 
 /* *********************  MOBILE  ******************** */

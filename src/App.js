@@ -37,7 +37,7 @@ function App() {
           </span>
 
           <span className="address">
-            MAP <i>(Click on the map to get )</i>
+            MAP <i>(Click on the map to get directions)</i>
           </span>
 
           <iframe
@@ -47,6 +47,7 @@ function App() {
             referrerpolicy="no-referrer-when-downgrade"
           />
         </div>
+        <div className="thanks">THANKS</div>
       </div>
     </div>
   );
