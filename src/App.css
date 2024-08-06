@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+
+:root {
+  --purple: rgb(59, 25, 138);
+  --pink: rgb(251, 86, 198);
+  --green: rgb(51, 109, 129);
+  --orange: rgb(201, 94, 57);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  position: relative;
+  height: 100%;
+  width: 600px;
+  background: url("../public/components/pattern.svg");
+  background-color: var(--purple);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.rangoli-anim {
+  position: absolute;
+  height: 450px;
+  width: 450px;
+  margin-top: -160px;
+  margin-right: -180px;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  padding: 50px 30px 30px 30px;
+  width: 520px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ganeshji-pic {
+  width: 120px;
+  margin-left: -25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.top-text {
+  font-size: 12px;
+  margin: 30px 0;
+}
+
+.gp {
+  font-family: "Holtwood One SC", serif;
+  font-size: 55px;
+  color: var(--pink);
+}
+
+.text-two {
+  font-size: 16px;
+  margin-top: 30px;
+  line-height: 2;
+}
+
+.date {
+  margin-top: 40px;
+  font-size: 28px;
+  background-color: var(--pink);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.fam-pic {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -20px;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* *********************  MOBILE  ******************** */
+@media only screen and (max-width: 480px) {
+  .container {
+    height: fit-content;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content {
+    height: fit-content;
+    width: 100%;
   }
 }
