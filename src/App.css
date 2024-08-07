@@ -100,9 +100,12 @@ body {
   align-items: center;
   font-size: 38px;
   font-weight: bold;
+  width: 90px;
 }
 
 .countdown p span {
+  width: 100%;
+  text-align: center;
   font-size: 14px;
 }
 
