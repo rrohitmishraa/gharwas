@@ -185,14 +185,14 @@ i {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   width: 100%;
   text-align: center;
 }
 
 .btnT {
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,6 +219,25 @@ i {
   color: black;
 }
 
+/* *********************  POPUP  ******************** */
+.container2,
+.content2 {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanks2 {
+  position: relative;
+}
+
+.btn2 {
+  height: 60px;
+  width: 120px;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
 /* *********************  MOBILE  ******************** */
 @media only screen and (max-width: 480px) {
   .container {
@@ -237,5 +256,13 @@ i {
 
   .container {
     padding: 12px;
+  }
+
+  .container2,
+  .content2 {
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
   }
 }

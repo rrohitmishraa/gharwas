@@ -13,30 +13,8 @@ const OptimizedLottie = memo(() => (
   />
 ));
 
-function App() {
-  const [lang, setLang] = useState(null);
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  function calculateTimeLeft() {
-    const targetDate = new Date("2024-11-08T00:00:00");
-    const now = new Date();
-    const difference = targetDate - now;
-
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-
-    return { days, hours };
-  }
+function Home() {
+  const [lang, setLang] = useState("eng");
 
   const languages = {
     eng: {
@@ -73,25 +51,27 @@ function App() {
     },
   };
 
-  if (lang === null) {
-    return (
-      <div className="container container2">
-        <div className="content content2">
-          <div className="thanks thanks2 btnT">
-            <h1>Choose Language / भाषा चुनें</h1>
-            <div>
-              <div className="btnEng btn2" onClick={() => setLang("eng")}>
-                English
-              </div>
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-              <div className="btnHin btn2" onClick={() => setLang("hin")}>
-                हिंदी
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  function calculateTimeLeft() {
+    const targetDate = new Date("2024-11-08T00:00:00");
+    const now = new Date();
+    const difference = targetDate - now;
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
+
+    return { days, hours };
   }
 
   return (
@@ -166,11 +146,21 @@ function App() {
         <div className="thanks btnT">
           Choose Language | भाषा चुनें
           <div>
-            <div className="btnEng" onClick={() => setLang("eng")}>
+            <div
+              className="btnEng"
+              onClick={() => {
+                setLang("eng");
+              }}
+            >
               English
             </div>
 
-            <div className="btnHin" onClick={() => setLang("hin")}>
+            <div
+              className="btnHin"
+              onClick={() => {
+                setLang("hin");
+              }}
+            >
               हिंदी
             </div>
           </div>
@@ -181,4 +171,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
