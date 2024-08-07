@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import "./App.css";
 import rangoli from "./rangoli.json";
@@ -14,6 +14,29 @@ const OptimizedLottie = memo(() => (
 ));
 
 function App() {
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  function calculateTimeLeft() {
+    const targetDate = new Date("2024-11-08T00:00:00");
+    const now = new Date();
+    const difference = targetDate - now;
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+
+    return { days, hours };
+  }
+
   return (
     <div className="container">
       <OptimizedLottie />
@@ -24,8 +47,16 @@ function App() {
         </span>
         <span className="top-text"> Cordially invite you to the </span>
         <span className="gp"> Griha Pravesh Ceremony </span>
-        <span className="text-two"> OF OUR NEW HOME ON </span>
-        <span className="date"> 8th Nov 2024</span>
+        <span className="text-two"> OF OUR NEW HOME IN </span>
+        <div className="countdown">
+          <p>
+            {timeLeft.days} <span>Days</span>
+          </p>
+          <p>
+            {timeLeft.hours} <span>Hours</span>
+          </p>
+        </div>
+        <span className="date">On 8th Nov 2024</span>
         <span className="time"> 10:00AM ONWARDS </span>
 
         <img src="./components/family.png" className="fam-pic" alt="" />

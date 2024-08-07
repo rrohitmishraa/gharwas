@@ -84,6 +84,27 @@ body {
   line-height: 2;
 }
 
+.countdown {
+  display: flex;
+  margin-top: 30px;
+}
+
+.countdown p {
+  background-color: var(--pink);
+  margin-right: 2px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+}
+
+.countdown p span {
+  font-size: 14px;
+}
+
 .date {
   margin-top: 45px;
   font-size: 28px;
