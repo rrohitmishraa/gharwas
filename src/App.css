@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+@font-face {
+  font-family: Rozha;
+  src: url("../public/fonts/RozhaOne.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Teko:wght@300..700&family=Yatra+One&display=swap");
 
 :root {
   --purple: rgb(59, 25, 138);
@@ -12,6 +17,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  font-family: "Yatra One";
 }
 
 * {
@@ -47,7 +53,7 @@ body {
 
 .content {
   display: flex;
-  padding: 30px 30px 200px 30px;
+  padding: 30px 30px 55% 30px;
   width: 100%;
   height: auto;
   display: flex;
@@ -60,22 +66,31 @@ body {
 }
 
 .names {
-  margin: 30px 0;
-  color: var(--green);
+  margin: 30px 0 0 0;
   font-weight: bold;
   font-size: 18px;
 }
 
+.two span {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.two {
+  margin: 0;
+}
+
 .top-text {
   font-size: 16px;
-  margin: 20px 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .gp {
-  font-family: "Holtwood One SC";
-  font-size: 45px;
+  font-size: 65px;
   color: var(--pink);
   margin-top: 5px;
+  line-height: 1.2;
 }
 
 .text-two {
@@ -90,9 +105,9 @@ body {
 }
 
 .countdown p {
-  background-color: var(--pink);
-  margin-right: 2px;
-  padding: 10px 20px;
+  background-color: white;
+  margin-right: 5px;
+  padding: 10px 10px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -100,13 +115,15 @@ body {
   align-items: center;
   font-size: 38px;
   font-weight: bold;
-  width: 90px;
+  width: 80px;
+  color: var(--pink);
 }
 
 .countdown p span {
   width: 100%;
   text-align: center;
   font-size: 14px;
+  color: var(--pink);
 }
 
 .date {
@@ -161,17 +178,45 @@ i {
   margin-bottom: -20px;
   width: 100%;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .thanks {
   position: absolute;
-  font-family: "Holtwood One SC";
   bottom: 0;
   left: 0;
   margin-bottom: 20px;
   width: 100%;
   text-align: center;
+}
+
+.btnT {
+  width: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.btnT div {
+  display: flex;
+  justify-content: center;
+}
+
+.btnHin,
+.btnEng {
+  width: 60px;
+  height: 25px;
+  margin: 10px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  background-color: white;
+  color: black;
 }
 
 /* *********************  MOBILE  ******************** */
